@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(itemId) {
+    const input = document.querySelector(`#id_qty_${itemId}`);
+    const currentValue = parseInt(input.value);
+
+    const minusDisabled = currentValue < 2;
+    const plusDisabled = currentValue > 98;
+
+    document.querySelector(`#decrement-qty_${itemId}`).disabled = minusDisabled;
+    document.querySelector(`#increment-qty_${itemId}`).disabled = plusDisabled;
+}
+
+// Check all quantity inputs when the page loads
+const allQtyInputs = document.querySelectorAll('.qty_input');
+
+for (const input of allQtyInputs) {
+    const itemId = input.dataset.item_id;
+    handleEnableDisable(itemId);
+}
+
+// Check when quantity is manually changed
+allQtyInputs.forEach(input => {
+    input.addEventListener('change', function() {
+        const itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+});
+
+// Increment quantity
+document.querySelectorAll('.increment-qty').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const inputGroup = this.closest('.input-group');
+        const closestInput = inputGroup.querySelector('.qty_input');
+
+        const currentValue = parseInt(closestInput.value);
+        closestInput.value = currentValue + 1;
+
+        const itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+});
+
+// Decrement quantity
+document.querySelectorAll('.decrement-qty').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const inputGroup = this.closest('.input-group');
+        const closestInput = inputGroup.querySelector('.qty_input');
+
+        const currentValue = parseInt(closestInput.value);
+        closestInput.value = currentValue - 1;
+
+        const itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+});
+</script>
