@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1', # local previw
     'localhost',  # listen for stripe webhooks
-    'https://ecommerce-app-ab5cd7b5d2cd.herokuapp.com/',  # heroku aplication
+    'ecommerce-app-ab5cd7b5d2cd.herokuapp.com',  # heroku aplication
 ]
 
 
