@@ -228,7 +228,7 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
 
 else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_BACKEND = 'custom_email_backend.EmailBackend'
     EMAIL_USE_TLS = False
     EMAIL_USE_SSL = True
     EMAIL_PORT = 465
