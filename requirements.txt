@@ -38,3 +38,4 @@ sqlparse==0.6.0
 stripe==16.0.0
 typing_extensions==4.16.0
 urllib3==2.8.0
+whitenoise==6.9.0
