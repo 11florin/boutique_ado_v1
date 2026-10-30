@@ -4,11 +4,13 @@ botocore==1.43.118
 certifi==2026.7.22
 cffi==2.1.1
 charset-normalizer==3.5.1
+cloudinary==1.44.1
 cryptography==50.0.1
 defusedxml==0.7.1
 dj-database-url==0.5.0
 Django==3.2.25
 django-allauth==0.50.0
+django-cloudinary-storage==0.3.0
 django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-storages==1.14.6
