@@ -325,4 +325,75 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .shopping-bag-table {
+        display: block;
+    }
+
+    .shopping-bag-table thead {
+        display: none;
+    }
+
+    .shopping-bag-table tbody,
+    .shopping-bag-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .shopping-bag-table .bag-item-row {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #dee2e6;
+        padding: .75rem 0;
+    }
+
+    .shopping-bag-table .bag-item-row td {
+        border: 0;
+        padding: .35rem .5rem !important;
+    }
+
+    .shopping-bag-table .bag-product-image {
+        width: 25%;
+    }
+
+    .shopping-bag-table .bag-product-info {
+        width: 75%;
+    }
+
+    .shopping-bag-table .bag-price,
+    .shopping-bag-table .bag-quantity,
+    .shopping-bag-table .bag-subtotal {
+        width: 33.3333% !important;
+    }
+
+    .shopping-bag-table .bag-quantity .input-group {
+        width: 100%;
+    }
+
+    .shopping-bag-table .bag-quantity .update-link,
+    .shopping-bag-table .bag-quantity .remove-item {
+        display: inline-block;
+        float: none !important;
+        margin-top: .35rem;
+    }
+
+    .shopping-bag-table .bag-quantity .remove-item {
+        margin-left: .5rem;
+    }
+
+    .shopping-bag-table .bag-summary-row td {
+        padding: 1.25rem .5rem .5rem !important;
+    }
+
+    .shopping-bag-table .bag-actions-row td {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: .5rem !important;
+    }
+
+    .shopping-bag-table .bag-actions-row .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
 }
